@@ -8,4 +8,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["./start.sh"]  # Replace with your actual start command
+CMD ["python app.py"] 
