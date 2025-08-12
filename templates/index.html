@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Downloader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="/static/icons/ytdlank.png">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="icons">
+          <img style="width: 80px; padding-bottom: 10px;" src="/static/icons/youtube.png">
+        </div>
+      <div class="brand">
+
+        <div class="brand-text">
+          <h1>YouTube Video Downloader</h1>
+          <p class="muted">Paste a YouTube link to preview formats and download — for personal & permitted use only.</p>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <input id="urlInput" type="text" placeholder="Paste your YouTube video link here (e.g. https://youtu.be/...)" />
+        <button id="fetchBtn" class="btn btn-download">Download ➜</button>
+      </div>
+
+      <!-- Wrapped loading bar for easier JS control -->
+      <div id="loadingContainer">
+        <div id="loadingBar" class="loading-bar" aria-hidden="true">
+          <div id="loadingFill" class="loading-fill"></div>
+        </div>
+      </div>
+
+      <div class="tiny-muted">Pro tip: Use links from videos you own or that are copyright free.</div>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="preview-card card hidden" id="infoCard">
+      <div class="preview-grid">
+        <img id="thumbImg" class="thumb" src="" alt="thumbnail" />
+        <div class="meta">
+          <h2 id="title">Title</h2>
+          <div id="uploader" class="muted small">Uploader</div>
+          <div id="details" class="muted small" style="margin-top:6px"></div>
+
+          <div class="format-row">
+            <label for="formatSelect" class="small muted">Choose quality</label>
+            <!-- Select will be populated by JS with only 240p, 480p, 720p, 1080p -->
+            <select id="formatSelect" data-quality=""></select>
+            <div id="sizeInfo" class="muted small" style="margin-top:6px"></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <button id="downloadBtn" class="btn btn-primary" disabled>Start Download</button>
+            <span id="infoMsg" class="muted small" style="margin-left:12px"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="platforms card">
+      <p class="muted center">Supported platforms</p>
+      <div class="icons">
+        <div class="icon">
+          <img src="/static/icons/windows.png" alt="Windows" />
+          <span>Windows</span>
+        </div>
+        <div class="icon">
+          <img src="/static/icons/macos.png" alt="macOS" />
+          <span>macOS</span>
+        </div>
+        <div class="icon">
+          <img src="/static/icons/android.png" alt="Android" />
+          <span>Android</span>
+        </div>
+        <div class="icon">
+          <img src="/static/icons/linux.png" alt="Linux" />
+          <span>Linux</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
