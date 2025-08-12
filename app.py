@@ -205,4 +205,4 @@ def serve_download(filename):
     return send_from_directory(DOWNLOADS_DIR, safe_name, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+    app.run(debug=True, threaded=True)
