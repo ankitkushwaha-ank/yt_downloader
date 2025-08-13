@@ -21,7 +21,7 @@ Paste a YouTube link, preview available formats, and download the video/audio fi
 ## Usage
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/ankitkushwaha-ank/yt_downloader](https://github.com/ankitkushwaha-ank/yt_downloader)
+    git clone https://github.com/ankitkushwaha-ank/yt_downloader
     cd yt_downloader
     ```
 
